@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "39aea54a-8f0f-412c-b24b-2c849e5d8a92",
+		"name": "csis-4280-project-endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "wines",
+			"item": [
+				{
+					"name": "ListAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll Sort Price Asc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?sort_price_order=asc",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "sort_price_order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll Sort Price Desc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?sort_price_order=desc",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "sort_price_order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Min Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?min_price=30",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "min_price",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Max Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?max_price=30",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "max_price",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Price Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?min_price=25&max_price=35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "min_price",
+									"value": "25"
+								},
+								{
+									"key": "max_price",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll Discounted",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?discount=0.15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "discount",
+									"value": "0.15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?country=italy",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "italy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?name=h",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "h"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Harvest Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?min_harvest=2021&max_harvest=2023",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "min_harvest",
+									"value": "2021"
+								},
+								{
+									"key": "max_harvest",
+									"value": "2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Grape",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?grape=Sémillon",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "grape",
+									"value": "Sémillon"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Producer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?producer=co",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "producer",
+									"value": "co"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?type=red,white",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "red,white"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAll By Food Pair",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines?food_pair=seafood",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							],
+							"query": [
+								{
+									"key": "food_pair",
+									"value": "seafood"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines/672edcf7ffbd5bdeb19c2456",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines",
+								"672edcf7ffbd5bdeb19c2456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wines/672d638ef46e255ea2012f8a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines",
+								"672d638ef46e255ea2012f8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jackson Triggs Reserve Chardonnay 750 mL\",\n    \"grape\": \"Chardonnay\",\n    \"producer\": \"Jackson Triggs\",\n    \"description\": \"Save 5% when you buy any 12 or more bottles. Mix & match a case. Plus Free Delivery on orders over $200, some exceptions apply.\",\n    \"country\": \"Canada\",\n    \"type\": \"White\",\n    \"price\": 15.00,\n    \"image_url\": \"https://example.com/jackson_triggs_chardonnay.jpg\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/wines",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jackson Triggs Reserve Chardonnay 1L\",\n    \"grape\": \"Montain Chardonnay\",\n    \"producer\": \"Jackson Triggs Co\",\n    \"description\": \"The best canadian wine brand\",\n    \"country\": \"Canada\",\n    \"type\": \"Rose\",\n    \"price\": 20.00,\n    \"image_url\": \"https://example.com/jackson_triggs_chardonnay10.jpg\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/wines/672d638ef46e255ea2012f8a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines",
+								"672d638ef46e255ea2012f8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Bulk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"wine_ids\": [\n        \"672edcf7ffbd5bdeb19c2456\",\n        \"672edcf7ffbd5bdeb19c2457\",\n        \"672edcf7ffbd5bdeb19c2458\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/wines/bulk",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wines",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchases",
+			"item": [
+				{
+					"name": "All out of stock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": \"605c72b1e708d84b7d6a7b3e\",\n  \"items\": [\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2456\",\n      \"quantity\": 1000\n    },\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2457\",\n      \"quantity\": 1000\n    },\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2458\",\n      \"quantity\": 1000\n    }\n  ],\n    \"address\": \"123 Main Street\",\n    \"city\": \"Sample City\",\n    \"province\": \"Sample Province\",\n    \"postal_code\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/purchases",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"purchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 Out of stock 1 OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": \"605c72b1e708d84b7d6a7b3e\",\n  \"items\": [\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2456\",\n      \"quantity\": 1\n    },\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2457\",\n      \"quantity\": 1000\n    }\n  ],\n    \"address\": \"123 Main Street\",\n    \"city\": \"Sample City\",\n    \"province\": \"Sample Province\",\n    \"postal_code\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/purchases",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"purchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 items OK Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": \"605c72b1e708d84b7d6a7b3e\",\n  \"items\": [\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2456\",\n      \"quantity\": 1\n    },\n    { \n      \"wine_id\": \"672edcf7ffbd5bdeb19c2457\",\n      \"quantity\": 1\n    }\n  ],\n    \"address\": \"123 Main Street\",\n    \"city\": \"Sample City\",\n    \"province\": \"Sample Province\",\n    \"postal_code\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/purchases",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"purchases"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8888/v1/api"
+		}
+	]
+}
